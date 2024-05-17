@@ -42,7 +42,7 @@ app.get("/", (req, res) => {
 // koneksi ke mongodb
 mongoose.set("strictQuery", false);
 mongoose
-  .connect(process.env.MONGO_URL)
+  .connect(process.env.MONGO_URI)
   .then(console.log("Berhasil terhubung ke mongodb"))
   .catch((err) => console.log(err));
 
